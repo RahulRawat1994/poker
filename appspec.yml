@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
+file_exists_behavior: OVERWRITE
 hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
@@ -16,3 +17,4 @@ hooks:
     - location: scripts/stop_server.sh
       timeout: 300
       runas: root
+      
